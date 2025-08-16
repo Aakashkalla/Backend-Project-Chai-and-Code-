@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
-
+import { app } from "./app.js";
 dotenv.config({
     path: './.env'
 })
@@ -13,7 +13,7 @@ connectDB().then(()=>{
 ).catch((error)=>{
     console.log("MONGODB CONNECTION FAILED!!! ", error)
 })
-/*
+/*  
 (async ()=>{
     try {
         await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`)
